@@ -1,67 +1,140 @@
-$libertadores :  rgb(156, 241, 156);
-$prelibertadores : rgb(135, 226, 235);
+$libertadores: rgb(89, 245, 89);
+$prelibertadores: rgb(251, 149, 54);
 $sulamericana: rgb(75, 143, 221);
 $rebaixados: rgb(221, 75, 75);
-
-.Libertadores{
-  svg{color:$libertadores}
-}
-.Pre-Libertadores{
-  svg{color:$prelibertadores}
-}
-.Sul-Americana{
-  svg{color:$sulamericana}
-}
-.Rebaixados{
-  svg{color:$rebaixados}
-}
-.indice{
-  span{
-    margin-right: 15px;
-    svg{
-      margin-right: 5px;
+.TabelaBrasileiro {
+  .time.pos.legenda {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 0 0px var(--sec-bg-color);
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--main-color);
+  }
+  .Libertadores {
+    svg {
+      color: $libertadores;
     }
   }
-}
-.classificacao{
-  max-width: 80vw;
-  margin: auto;
-  .time {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);
-    border-radius: 25px;
-    padding: 35px;
-    margin: 3em;
-
+  .Pre-Libertadores {
+    svg {
+      color: $prelibertadores;
+    }
+  }
+  .Sul-Americana {
+    svg {
+      color: $sulamericana;
+    }
+  }
+  .Rebaixados {
+    svg {
+      color: $rebaixados;
+    }
+  }
+  .indice {
     span {
-      margin: 15px;
+      margin-right: 15px;
+      svg {
+        margin-right: 5px;
+      }
+    }
   }
-    .infos {
+  .classificacao {
+    max-width: 80vw;
+    margin: auto;
+    .time {
+      display: flex;
       flex-direction: row;
-   
-  }
-}
-  .\31,.\32,.\33,.\34  {
-    &{
-      background-color: $libertadores;
-    }
-  }
-  .\35,.\36 {
-    &{
-      background-color: $prelibertadores ;
-    }
-  }
-  .\37,.\38,.\39,.\310,.\311 ,.\312   {
-    &{
-      background-color: $sulamericana;
-    }
-  }
-  .\31 7,.\31 8,.\31 9,.\32 0   {
-    &{
-      background-color: $rebaixados;
-    }
-  }
-}
+      justify-content: space-evenly;
+      box-shadow: 10px 10px 5px 0px var(--sec-bg-color);
+      border-radius: 25px;
+      padding: 35px;
+      margin: 1em;
+      background: white;
 
+      span {
+        margin: 15px;
+      }
+      .infos {
+        flex-direction: row;
+        display: flex;
+        span {
+          width: 30px;
+          display: flex;
+          margin: 9px;
+        }
+        .aproveitamento {
+          width: unset !important;
+        }
+      }
+    }
+  }
+
+  [data-posicao="1"],
+  [data-posicao="2"],
+  [data-posicao="3"],
+  [data-posicao="4"] {
+    .posicao svg {
+      color: $libertadores;
+    }
+  }
+  [data-posicao="5"],
+  [data-posicao="6"] {
+    .posicao svg {
+      color: $prelibertadores;
+    }
+  }
+  [data-posicao="7"],
+  [data-posicao="8"],
+  [data-posicao="9"],
+  [data-posicao="10"],
+  [data-posicao="11"] {
+    .posicao svg {
+      color: $sulamericana;
+    }
+  }
+  [data-posicao="12"],
+  [data-posicao="13"],
+  [data-posicao="14"],
+  [data-posicao="15"],
+  [data-posicao="16"] {
+    .posicao svg {
+      color: transparent;
+    }
+  }
+  [data-posicao="17"],
+  [data-posicao="18"],
+  [data-posicao="19"],
+  [data-posicao="20"] {
+    .posicao svg {
+      color: $rebaixados;
+    }
+  }
+
+  .variacao.positiva {
+    color: green;
+  }
+  .variacao.negaviva {
+    color: red;
+  }
+
+  .posicao,
+  .nome {
+    width: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .infos {
+    width: 40em;
+  }
+  .legenda {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+}

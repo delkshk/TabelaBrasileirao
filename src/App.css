@@ -1,7 +1,14 @@
 @import '~antd/dist/antd.css';
-
+:root {
+  --main-bg-color: white;
+  --sec-bg-color: rgba(181, 181, 181, 0.28);
+  --main-color: #13aae6;
+}
 .App {
   text-align: center;
+}
+body {
+  background-color: var(--main-bg-color); 
 }
 
 .App-logo {
