@@ -1,0 +1,67 @@
+$libertadores :  rgb(156, 241, 156);
+$prelibertadores : rgb(135, 226, 235);
+$sulamericana: rgb(75, 143, 221);
+$rebaixados: rgb(221, 75, 75);
+
+.Libertadores{
+  svg{color:$libertadores}
+}
+.Pre-Libertadores{
+  svg{color:$prelibertadores}
+}
+.Sul-Americana{
+  svg{color:$sulamericana}
+}
+.Rebaixados{
+  svg{color:$rebaixados}
+}
+.indice{
+  span{
+    margin-right: 15px;
+    svg{
+      margin-right: 5px;
+    }
+  }
+}
+.classificacao{
+  max-width: 80vw;
+  margin: auto;
+  .time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);
+    border-radius: 25px;
+    padding: 35px;
+    margin: 3em;
+
+    span {
+      margin: 15px;
+  }
+    .infos {
+      flex-direction: row;
+   
+  }
+}
+  .\31,.\32,.\33,.\34  {
+    &{
+      background-color: $libertadores;
+    }
+  }
+  .\35,.\36 {
+    &{
+      background-color: $prelibertadores ;
+    }
+  }
+  .\37,.\38,.\39,.\310,.\311 ,.\312   {
+    &{
+      background-color: $sulamericana;
+    }
+  }
+  .\31 7,.\31 8,.\31 9,.\32 0   {
+    &{
+      background-color: $rebaixados;
+    }
+  }
+}
+
